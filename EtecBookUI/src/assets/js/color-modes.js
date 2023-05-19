@@ -7,7 +7,7 @@
 (() => {
   'use strict'
 
-  const storedTheme = localStorage.getItem('theme')
+  const storedTheme = localStorage.getItem('themeEtecBook')
 
   const getPreferredTheme = () => {
     if (storedTheme) {
@@ -68,7 +68,7 @@
       .forEach(toggle => {
         toggle.addEventListener('click', () => {
           const theme = toggle.getAttribute('data-bs-theme-value')
-          localStorage.setItem('theme', theme)
+          localStorage.setItem('themeEtecBook', theme)
           setTheme(theme)
           showActiveTheme(theme, true)
         })
